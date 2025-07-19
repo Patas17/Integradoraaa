@@ -26,5 +26,10 @@ namespace ProyectoIntegrador1
         {
 
         }
+
+        private void Historial_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

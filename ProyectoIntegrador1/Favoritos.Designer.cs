@@ -3,14 +3,14 @@
     partial class Favoritos
     {
         /// <summary>
-        /// Required designer variable.
+        /// Variable del diseñador necesaria.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Limpia los recursos que se estén usando.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true si los recursos administrados se deben eliminar; false en caso contrario.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,11 +20,11 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Código generado por el Diseñador de Windows Forms
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Método necesario para soporte del Diseñador - No modificar
+        /// el contenido de este método con el editor de código.
         /// </summary>
         private void InitializeComponent()
         {
@@ -32,23 +32,23 @@
             MenuCatalogo = new ToolStripMenuItem();
             MenuAgregarPlanta = new ToolStripMenuItem();
             MenuFavoritos = new ToolStripMenuItem();
-            MenuSeguimiento = new ToolStripMenuItem();
             MenuUsuarios = new ToolStripMenuItem();
             menu = new MenuStrip();
-            button1 = new Button();
+            flwFavoritos = new FlowLayoutPanel();
             menu.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Historic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI Historic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(35, 77, 50);
-            label1.Location = new Point(256, 40);
+            label1.Location = new Point(379, 51);
             label1.Name = "label1";
-            label1.Size = new Size(227, 30);
+            label1.Size = new Size(283, 37);
             label1.TabIndex = 1;
             label1.Text = "Tus Plantas Favoritas";
+            label1.Click += label1_Click;
             // 
             // MenuCatalogo
             // 
@@ -71,13 +71,6 @@
             MenuFavoritos.Text = "Favoritos";
             MenuFavoritos.Click += MenuFavoritos_Click;
             // 
-            // MenuSeguimiento
-            // 
-            MenuSeguimiento.Name = "MenuSeguimiento";
-            MenuSeguimiento.Size = new Size(102, 23);
-            MenuSeguimiento.Text = "Seguimiento";
-            MenuSeguimiento.Click += MenuSeguimiento_Click;
-            // 
             // MenuUsuarios
             // 
             MenuUsuarios.Name = "MenuUsuarios";
@@ -87,40 +80,36 @@
             // 
             // menu
             // 
-            menu.Font = new Font("Sitka Small", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            menu.Font = new Font("Sitka Small", 9.749999F);
             menu.GripStyle = ToolStripGripStyle.Visible;
             menu.ImageScalingSize = new Size(24, 24);
-            menu.Items.AddRange(new ToolStripItem[] { MenuCatalogo, MenuAgregarPlanta, MenuFavoritos, MenuSeguimiento, MenuUsuarios });
+            menu.Items.AddRange(new ToolStripItem[] { MenuCatalogo, MenuAgregarPlanta, MenuFavoritos, MenuUsuarios });
             menu.Location = new Point(0, 0);
             menu.Name = "menu";
-            menu.Size = new Size(724, 27);
+            menu.Size = new Size(1038, 27);
             menu.TabIndex = 41;
             menu.Text = "menuStrip2";
             // 
-            // button1
+            // flwFavoritos
             // 
-            button1.BackColor = Color.FromArgb(59, 119, 80);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI Historic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = SystemColors.ControlLight;
-            button1.Location = new Point(279, 327);
-            button1.Name = "button1";
-            button1.Size = new Size(170, 33);
-            button1.TabIndex = 42;
-            button1.Text = "Explorar mas plantas";
-            button1.UseVisualStyleBackColor = false;
+            flwFavoritos.Location = new Point(23, 101);
+            flwFavoritos.Name = "flwFavoritos";
+            flwFavoritos.Size = new Size(993, 574);
+            flwFavoritos.TabIndex = 42;
+            flwFavoritos.Paint += flwFavoritos_Paint;
             // 
             // Favoritos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(237, 243, 236);
-            ClientSize = new Size(724, 372);
-            Controls.Add(button1);
+            ClientSize = new Size(1038, 701);
+            Controls.Add(flwFavoritos);
             Controls.Add(menu);
             Controls.Add(label1);
             Name = "Favoritos";
             Text = "Favoritos";
+            WindowState = FormWindowState.Maximized;
             Load += Favoritos_Load;
             menu.ResumeLayout(false);
             menu.PerformLayout();
@@ -129,13 +118,13 @@
         }
 
         #endregion
-        private Label label1;
-		private ToolStripMenuItem MenuCatalogo;
-		private ToolStripMenuItem MenuAgregarPlanta;
-		private ToolStripMenuItem MenuFavoritos;
-		private ToolStripMenuItem MenuSeguimiento;
-		private ToolStripMenuItem MenuUsuarios;
-		private MenuStrip menu;
-        private Button button1;
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem MenuCatalogo;
+        private System.Windows.Forms.ToolStripMenuItem MenuAgregarPlanta;
+        private System.Windows.Forms.ToolStripMenuItem MenuFavoritos;
+        private System.Windows.Forms.ToolStripMenuItem MenuUsuarios;
+        private System.Windows.Forms.MenuStrip menu;
+        private System.Windows.Forms.FlowLayoutPanel flwFavoritos;
     }
 }

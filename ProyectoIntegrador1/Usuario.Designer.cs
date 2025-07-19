@@ -32,9 +32,9 @@
             MenuCatalogo = new ToolStripMenuItem();
             MenuAgregarPlanta = new ToolStripMenuItem();
             MenuFavoritos = new ToolStripMenuItem();
-            MenuSeguimiento = new ToolStripMenuItem();
             MenuUsuarios = new ToolStripMenuItem();
             panel1 = new Panel();
+            btncerrarses = new Button();
             txtNueva = new TextBox();
             txtActual = new TextBox();
             btnCambiar = new Button();
@@ -50,7 +50,7 @@
             menuStrip2.Font = new Font("Sitka Small", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             menuStrip2.GripStyle = ToolStripGripStyle.Visible;
             menuStrip2.ImageScalingSize = new Size(24, 24);
-            menuStrip2.Items.AddRange(new ToolStripItem[] { MenuCatalogo, MenuAgregarPlanta, MenuFavoritos, MenuSeguimiento, MenuUsuarios });
+            menuStrip2.Items.AddRange(new ToolStripItem[] { MenuCatalogo, MenuAgregarPlanta, MenuFavoritos, MenuUsuarios });
             menuStrip2.Location = new Point(0, 0);
             menuStrip2.Name = "menuStrip2";
             menuStrip2.Size = new Size(663, 27);
@@ -78,13 +78,6 @@
             MenuFavoritos.Text = "Favoritos";
             MenuFavoritos.Click += MenuFavoritos_Click;
             // 
-            // MenuSeguimiento
-            // 
-            MenuSeguimiento.Name = "MenuSeguimiento";
-            MenuSeguimiento.Size = new Size(102, 23);
-            MenuSeguimiento.Text = "Seguimiento";
-            MenuSeguimiento.Click += MenuSeguimiento_Click;
-            // 
             // MenuUsuarios
             // 
             MenuUsuarios.Name = "MenuUsuarios";
@@ -95,30 +88,49 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(249, 251, 247);
+            panel1.Controls.Add(btncerrarses);
             panel1.Controls.Add(txtNueva);
             panel1.Controls.Add(txtActual);
             panel1.Controls.Add(btnCambiar);
             panel1.Controls.Add(lblCorreo);
             panel1.Controls.Add(lblNombre);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(32, 37);
+            panel1.Location = new Point(32, 30);
             panel1.Name = "panel1";
-            panel1.Size = new Size(597, 390);
+            panel1.Size = new Size(597, 397);
             panel1.TabIndex = 40;
             panel1.Paint += panel1_Paint;
             // 
+            // btncerrarses
+            // 
+            btncerrarses.BackColor = Color.FromArgb(59, 119, 80);
+            btncerrarses.FlatStyle = FlatStyle.Flat;
+            btncerrarses.Font = new Font("Segoe UI Historic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btncerrarses.ForeColor = SystemColors.ControlLight;
+            btncerrarses.Location = new Point(136, 334);
+            btncerrarses.Name = "btncerrarses";
+            btncerrarses.Size = new Size(318, 42);
+            btncerrarses.TabIndex = 6;
+            btncerrarses.Text = "Cerrar sesion";
+            btncerrarses.UseVisualStyleBackColor = false;
+            btncerrarses.Click += button1_Click_1;
+            // 
             // txtNueva
             // 
-            txtNueva.Location = new Point(273, 200);
+            txtNueva.Font = new Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNueva.Location = new Point(136, 224);
             txtNueva.Name = "txtNueva";
-            txtNueva.Size = new Size(100, 23);
+            txtNueva.PlaceholderText = "Contraseña nueva";
+            txtNueva.Size = new Size(318, 35);
             txtNueva.TabIndex = 5;
             // 
             // txtActual
             // 
-            txtActual.Location = new Point(229, 158);
+            txtActual.Font = new Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtActual.Location = new Point(136, 183);
             txtActual.Name = "txtActual";
-            txtActual.Size = new Size(100, 23);
+            txtActual.PlaceholderText = "Contraseña actual";
+            txtActual.Size = new Size(318, 35);
             txtActual.TabIndex = 4;
             txtActual.TextChanged += txtActual_TextChanged;
             // 
@@ -128,9 +140,9 @@
             btnCambiar.FlatStyle = FlatStyle.Flat;
             btnCambiar.Font = new Font("Segoe UI Historic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCambiar.ForeColor = SystemColors.ControlLight;
-            btnCambiar.Location = new Point(160, 252);
+            btnCambiar.Location = new Point(136, 286);
             btnCambiar.Name = "btnCambiar";
-            btnCambiar.Size = new Size(240, 38);
+            btnCambiar.Size = new Size(318, 42);
             btnCambiar.TabIndex = 3;
             btnCambiar.Text = "Cambiar contraseña";
             btnCambiar.UseVisualStyleBackColor = false;
@@ -139,29 +151,31 @@
             // lblCorreo
             // 
             lblCorreo.AutoSize = true;
-            lblCorreo.Location = new Point(151, 130);
+            lblCorreo.Font = new Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCorreo.Location = new Point(136, 132);
             lblCorreo.Name = "lblCorreo";
-            lblCorreo.Size = new Size(108, 15);
+            lblCorreo.Size = new Size(187, 28);
             lblCorreo.TabIndex = 2;
             lblCorreo.Text = "Correo electronico:";
             // 
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.Location = new Point(151, 97);
+            lblNombre.Font = new Font("Segoe UI Emoji", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblNombre.Location = new Point(136, 92);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(54, 15);
+            lblNombre.Size = new Size(93, 28);
             lblNombre.TabIndex = 1;
             lblNombre.Text = "Nombre:";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Historic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI Historic", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(35, 77, 50);
             label1.Location = new Point(230, 18);
             label1.Name = "label1";
-            label1.Size = new Size(148, 45);
+            label1.Size = new Size(156, 47);
             label1.TabIndex = 0;
             label1.Text = "Mi perfil";
             // 
@@ -191,7 +205,6 @@
 		private ToolStripMenuItem MenuCatalogo;
 		private ToolStripMenuItem MenuAgregarPlanta;
 		private ToolStripMenuItem MenuFavoritos;
-		private ToolStripMenuItem MenuSeguimiento;
 		private ToolStripMenuItem MenuUsuarios;
         private Panel panel1;
         private Label label1;
@@ -200,5 +213,6 @@
         private Label lblNombre;
         private TextBox txtNueva;
         private TextBox txtActual;
+        private Button btncerrarses;
     }
 }

@@ -53,46 +53,50 @@
             // lbl_InicioSesion
             // 
             lbl_InicioSesion.AutoSize = true;
-            lbl_InicioSesion.Font = new Font("Times New Roman", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbl_InicioSesion.Location = new Point(187, 29);
+            lbl_InicioSesion.Font = new Font("Segoe UI Historic", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbl_InicioSesion.ForeColor = Color.FromArgb(35, 77, 50);
+            lbl_InicioSesion.Location = new Point(173, 38);
             lbl_InicioSesion.Margin = new Padding(2, 0, 2, 0);
             lbl_InicioSesion.Name = "lbl_InicioSesion";
-            lbl_InicioSesion.Size = new Size(256, 43);
+            lbl_InicioSesion.Size = new Size(290, 50);
             lbl_InicioSesion.TabIndex = 0;
             lbl_InicioSesion.Text = "Inicio de sesion";
             lbl_InicioSesion.Click += lbl_InicioSesion_Click;
             // 
             // txtCorreo
             // 
-            txtCorreo.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtCorreo.Location = new Point(173, 125);
+            txtCorreo.Font = new Font("Segoe UI Emoji", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCorreo.Location = new Point(126, 125);
             txtCorreo.Margin = new Padding(2);
             txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(292, 35);
+            txtCorreo.PlaceholderText = "Correo electronico";
+            txtCorreo.Size = new Size(367, 39);
             txtCorreo.TabIndex = 3;
-            txtCorreo.Text = "Correo elctronico";
             // 
             // txtContra
             // 
-            txtContra.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtContra.Location = new Point(173, 188);
+            txtContra.Font = new Font("Segoe UI Emoji", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtContra.Location = new Point(126, 188);
             txtContra.Margin = new Padding(2);
             txtContra.Name = "txtContra";
-            txtContra.Size = new Size(292, 35);
+            txtContra.PlaceholderText = "Contraseña";
+            txtContra.Size = new Size(367, 39);
             txtContra.TabIndex = 4;
-            txtContra.Text = "Contraseña";
             txtContra.TextChanged += txtContra_TextChanged;
             // 
             // btnIniciar
             // 
-            btnIniciar.Font = new Font("Times New Roman", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnIniciar.Location = new Point(173, 256);
+            btnIniciar.BackColor = Color.FromArgb(59, 119, 80);
+            btnIniciar.FlatStyle = FlatStyle.Flat;
+            btnIniciar.Font = new Font("Segoe UI Historic", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnIniciar.ForeColor = SystemColors.ControlLight;
+            btnIniciar.Location = new Point(126, 255);
             btnIniciar.Margin = new Padding(2);
             btnIniciar.Name = "btnIniciar";
-            btnIniciar.Size = new Size(292, 37);
+            btnIniciar.Size = new Size(367, 42);
             btnIniciar.TabIndex = 5;
             btnIniciar.Text = "Iniciar Sesión";
-            btnIniciar.UseVisualStyleBackColor = true;
+            btnIniciar.UseVisualStyleBackColor = false;
             btnIniciar.Click += btnIniciar_Click;
             // 
             // tbCuenta
@@ -152,9 +156,9 @@
             txtEmail.Location = new Point(142, 144);
             txtEmail.Margin = new Padding(2);
             txtEmail.Name = "txtEmail";
+            txtEmail.PlaceholderText = "Correo electronico";
             txtEmail.Size = new Size(367, 39);
             txtEmail.TabIndex = 13;
-            txtEmail.Text = "Correo electronico";
             // 
             // txtPass
             // 
@@ -162,9 +166,9 @@
             txtPass.Location = new Point(142, 204);
             txtPass.Margin = new Padding(2);
             txtPass.Name = "txtPass";
+            txtPass.PlaceholderText = "Contraseña";
             txtPass.Size = new Size(367, 39);
             txtPass.TabIndex = 10;
-            txtPass.Text = "Contraseña";
             // 
             // txtName
             // 
@@ -172,9 +176,9 @@
             txtName.Location = new Point(142, 89);
             txtName.Margin = new Padding(2);
             txtName.Name = "txtName";
+            txtName.PlaceholderText = "Nombre completo";
             txtName.Size = new Size(367, 39);
             txtName.TabIndex = 9;
-            txtName.Text = "Nombre Completo";
             // 
             // lblRegistro
             // 
@@ -217,6 +221,7 @@
             // 
             // Iniciar_Sesion
             // 
+            Iniciar_Sesion.BackColor = Color.FromArgb(249, 251, 247);
             Iniciar_Sesion.Controls.Add(linkLabel2);
             Iniciar_Sesion.Controls.Add(label2);
             Iniciar_Sesion.Controls.Add(txtContra);
@@ -230,7 +235,6 @@
             Iniciar_Sesion.Size = new Size(597, 390);
             Iniciar_Sesion.TabIndex = 1;
             Iniciar_Sesion.Text = "Inicio de sesion";
-            Iniciar_Sesion.UseVisualStyleBackColor = true;
             Iniciar_Sesion.Click += Iniciar_Sesion_Click;
             // 
             // linkLabel2
@@ -263,6 +267,7 @@
             Margin = new Padding(2);
             Name = "Inicio_de_sesion";
             Text = "Inicio_de_sesion";
+            Load += Inicio_de_sesion_Load;
             tbCuenta.ResumeLayout(false);
             Registrarse.ResumeLayout(false);
             Registrarse.PerformLayout();

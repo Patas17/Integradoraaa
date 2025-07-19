@@ -90,6 +90,9 @@ namespace ProyectoIntegrador1
                         Sesion.Correo = reader["correo"].ToString();
                         Sesion.Contraseña = reader["contraseña"].ToString();
 
+                        //guarda el ID del usuario en la sesion actual 
+                        SesionActual.UsuarioId = Convert.ToInt32(reader["idusuarios"]);
+
                         MessageBox.Show($"¡Bienvenido {Sesion.Nombre}!");
 
                         Catalogo cat = new Catalogo();
@@ -136,6 +139,11 @@ namespace ProyectoIntegrador1
         }
 
         private void Registrarse_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Inicio_de_sesion_Load(object sender, EventArgs e)
         {
 
         }

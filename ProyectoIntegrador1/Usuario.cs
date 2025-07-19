@@ -40,13 +40,6 @@ namespace ProyectoIntegrador1
             this.Hide();
         }
 
-        private void MenuSeguimiento_Click(object sender, EventArgs e)
-        {
-            Seguimiento ventanaSegui = new Seguimiento();
-            ventanaSegui.Show();
-            this.Hide();
-        }
-
         private void MenuUsuarios_Click(object sender, EventArgs e)
         {
             Usuario ventanaUsua = new Usuario();
@@ -77,7 +70,7 @@ namespace ProyectoIntegrador1
 
             using (coneccionMySQL con = new coneccionMySQL())
             {
-                string sql = "UPDATE Usuarios SET contraseña=@Nueva WHERE id=@Id";   // usa la misma columna
+                string sql = "UPDATE Usuarios SET contraseña=@Nueva WHERE idusuarios=@Id";   // usa la misma columna
                 MySqlCommand cmd = new MySqlCommand(sql, con.GetConnection());
                 cmd.Parameters.AddWithValue("@Nueva", nuevaHash);
                 cmd.Parameters.AddWithValue("@Id", Sesion.IdUsuario);
@@ -111,6 +104,13 @@ namespace ProyectoIntegrador1
         private void txtActual_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Inicio_de_sesion ventanainicio = new Inicio_de_sesion();
+            ventanainicio.Show();
+            this.Hide();
         }
     }
 }
