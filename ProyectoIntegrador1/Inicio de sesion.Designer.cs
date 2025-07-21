@@ -79,6 +79,7 @@
             txtContra.Location = new Point(126, 188);
             txtContra.Margin = new Padding(2);
             txtContra.Name = "txtContra";
+            txtContra.PasswordChar = '*';
             txtContra.PlaceholderText = "Contraseña";
             txtContra.Size = new Size(367, 39);
             txtContra.TabIndex = 4;
@@ -166,6 +167,7 @@
             txtPass.Location = new Point(142, 204);
             txtPass.Margin = new Padding(2);
             txtPass.Name = "txtPass";
+            txtPass.PasswordChar = '*';
             txtPass.PlaceholderText = "Contraseña";
             txtPass.Size = new Size(367, 39);
             txtPass.TabIndex = 10;

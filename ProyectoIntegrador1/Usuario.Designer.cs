@@ -34,6 +34,8 @@
             MenuFavoritos = new ToolStripMenuItem();
             MenuUsuarios = new ToolStripMenuItem();
             panel1 = new Panel();
+            label3 = new Label();
+            label2 = new Label();
             btncerrarses = new Button();
             txtNueva = new TextBox();
             txtActual = new TextBox();
@@ -88,6 +90,8 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(249, 251, 247);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label2);
             panel1.Controls.Add(btncerrarses);
             panel1.Controls.Add(txtNueva);
             panel1.Controls.Add(txtActual);
@@ -100,6 +104,26 @@
             panel1.Size = new Size(597, 397);
             panel1.TabIndex = 40;
             panel1.Paint += panel1_Paint;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(136, 77);
+            label3.Name = "label3";
+            label3.Size = new Size(55, 15);
+            label3.TabIndex = 8;
+            label3.Text = "Tus datos";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(136, 165);
+            label2.Name = "label2";
+            label2.Size = new Size(121, 15);
+            label2.TabIndex = 7;
+            label2.Text = "Cambio de contraseña...";
             // 
             // btncerrarses
             // 
@@ -214,5 +238,7 @@
         private TextBox txtNueva;
         private TextBox txtActual;
         private Button btncerrarses;
+        private Label label3;
+        private Label label2;
     }
 }
