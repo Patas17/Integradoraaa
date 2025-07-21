@@ -86,8 +86,16 @@ namespace Flower_Grow
 		//Botón para borrar una planta y sus relaciones.
 		private void btn_Eliminar_Click(object sender, EventArgs e)
 		{
-			BorrarPlanta();
-			limpiarCampos();
+			DialogResult result = MessageBox.Show(
+					  "¿Seguro que quieres quitar esta planta de favoritos?",
+					  "Confirmar eliminación",
+					  MessageBoxButtons.YesNo,
+					  MessageBoxIcon.Question);
+			if (result == DialogResult.Yes)
+			{
+				BorrarPlanta();
+				limpiarCampos();
+			}
 		}
 		//Bótón para cargar una imagen
 		private void btnCargarImagen_Click(object sender, EventArgs e)
@@ -348,10 +356,6 @@ namespace Flower_Grow
 							txt_Clase.Text = leerClasificacion["Clase"].ToString();
 							txt_Division.Text = leerClasificacion["Division"].ToString();
 						}
-						else
-						{
-							MessageBox.Show("Clasificacion no encontrada");
-						}
 					}
 
 					cmd.CommandText = "SELECT Lugar_Adecuado FROM lugar WHERE idLugar= @idLugar";
@@ -362,10 +366,7 @@ namespace Flower_Grow
 						{
 							cmbLugar.Text = leerLugar["Lugar_Adecuado"].ToString();
 						}
-						else
-						{
-							MessageBox.Show("Lugar no encontrado");
-						}
+
 					}
 					cmd.Parameters.Clear();
 				}
@@ -602,12 +603,7 @@ namespace Flower_Grow
 					cmd5.Parameters.AddWithValue("@id", idPlanta);
 					cmd5.ExecuteNonQuery();
 
-					// 6. Eliminar de plantas_usuario si aplica
-					var cmd6 = new MySqlCommand("DELETE FROM plantas_usuario WHERE idPlantas_Usuario = @id", conn.GetConnection(), transaction);
-					cmd6.Parameters.AddWithValue("@id", idPlanta);
-					cmd6.ExecuteNonQuery();
-
-					// 7. Finalmente, eliminar de PLANTAS
+					// 6. Finalmente, eliminar de PLANTAS
 					var cmd7 = new MySqlCommand("DELETE FROM plantas WHERE idPlantas = @id", conn.GetConnection(), transaction);
 					cmd7.Parameters.AddWithValue("@id", idPlanta);
 					cmd7.ExecuteNonQuery();
