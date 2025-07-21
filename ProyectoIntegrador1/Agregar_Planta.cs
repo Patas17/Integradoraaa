@@ -87,7 +87,7 @@ namespace Flower_Grow
 		private void btn_Eliminar_Click(object sender, EventArgs e)
 		{
 			DialogResult result = MessageBox.Show(
-					  "¿Seguro que quieres quitar esta planta de favoritos?",
+					  "¿Seguro que quieres eliminar la planta permanentemente?",
 					  "Confirmar eliminación",
 					  MessageBoxButtons.YesNo,
 					  MessageBoxIcon.Question);
@@ -682,21 +682,7 @@ namespace Flower_Grow
 
 		}
 
-		private void txt_Nombre_TextChanged(object sender, EventArgs e)
-		{
-
-		}
-
-		private void txt_Division_TextChanged(object sender, EventArgs e)
-		{
-
-		}
-
-		private void lbl_Genero_Click(object sender, EventArgs e)
-		{
-
-		}
-
+		
 		
 	}
 }

@@ -169,7 +169,7 @@
 			txt_Division.Name = "txt_Division";
 			txt_Division.Size = new Size(180, 41);
 			txt_Division.TabIndex = 12;
-			txt_Division.TextChanged += txt_Division_TextChanged;
+
 			// 
 			// txtGenero
 			// 
@@ -207,7 +207,7 @@
 			lbl_Genero.Size = new Size(97, 32);
 			lbl_Genero.TabIndex = 8;
 			lbl_Genero.Text = "Género:";
-			lbl_Genero.Click += lbl_Genero_Click;
+		
 			// 
 			// txt_Orden
 			// 
@@ -386,7 +386,6 @@
 			txt_Nombre.PlaceholderText = "Ejemplo: Palma Thrinax";
 			txt_Nombre.Size = new Size(268, 41);
 			txt_Nombre.TabIndex = 37;
-			txt_Nombre.TextChanged += txt_Nombre_TextChanged;
 			// 
 			// menu
 			// 
